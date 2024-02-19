@@ -1,24 +1,20 @@
-import Link from "next/link";
-
 export default function cart() {
+  let 장바구니 = ["Tomatoes", "Pasta"];
   return (
     <div>
       <h4 className="title">Cart</h4>
+      <Cartlist item={장바구니[0]} />
       <Cartlist />
       <Cartlist />
-      <Link href="/cart/payment">
-        <button className="cartBtn">결제 하기</button>
-      </Link>
-      <p>현대카드 결제시 무이자 이벤트</p>
     </div>
   );
 }
 
-function Cartlist() {
+function Cartlist(props: { item?: string }) {
   return (
     <div>
       <div className="cart-item">
-        <p>상품명</p>
+        <p>{props.item}</p>
         <p>$40</p>
         <p>1개</p>
       </div>
