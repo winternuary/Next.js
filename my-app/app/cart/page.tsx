@@ -6,6 +6,7 @@ export default function cart() {
       <Cartlist item={장바구니[0]} />
       <Cartlist item={장바구니[1]} />
       <Banner content="롯데카드" color="red" />
+      <Btn color="red" />
     </div>
   );
 }
@@ -26,6 +27,6 @@ function Cartlist(props: { item?: string }) {
   );
 }
 
-function Btn() {
-  return <button style={{ background: "red" }}>버튼임</button>;
+function Btn(props: { color: string }) {
+  return <button style={{ background: props.color }}>버튼임</button>;
 }
