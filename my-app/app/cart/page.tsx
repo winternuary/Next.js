@@ -25,3 +25,7 @@ function Cartlist(props: { item?: string }) {
     </div>
   );
 }
+
+function Btn() {
+  return <button style={{ background: "red" }}>버튼임</button>;
+}
