@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function List() {
   const 상품 = [
@@ -6,6 +7,7 @@ export default function List() {
     { name: "Pasta", image: "food2.jpg" },
     { name: "Chicken", image: "food3.jpg" },
   ];
+  let [수량, 수량변경] = useState(0);
 
   return (
     <div>
@@ -19,6 +21,14 @@ export default function List() {
             width={200}
             height={200}
           />
+          <span>{수량}</span>
+          <button
+            onClick={() => {
+              수량변경(수량 + 1);
+            }}
+          >
+            +
+          </button>
         </div>
       ))}
     </div>
