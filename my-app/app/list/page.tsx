@@ -29,6 +29,13 @@ export default function List() {
           >
             +
           </button>
+          <button
+            onClick={() => {
+              수량변경(수량 - 1);
+            }}
+          >
+            -
+          </button>
         </div>
       ))}
     </div>
